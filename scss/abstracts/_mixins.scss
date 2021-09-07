@@ -1,0 +1,13 @@
+@function neg($val) {
+    @return $val * -1;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin round($size) {
+    @include square($size);
+    border-radius: 50%;
+}
