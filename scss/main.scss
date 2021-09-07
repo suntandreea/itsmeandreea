@@ -6,11 +6,10 @@
 @import 'base/typography';
 
 
-// @import 'components/';
+@import 'components/moon';
+@import 'components/stars';
 
+@import 'layout/generic';
 @import 'layout/header';
 @import 'layout/footer';
-
-@import 'pages/home';
-@import 'pages/portfolio';
-@import 'pages/contact';
+@import 'layout/welcome-screen';

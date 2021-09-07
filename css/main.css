@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+:root {
+  --main-dark-color:        #0E1525;
+  --main-light-color:       #f9f9f9;
+  --secondary-dark-color:   #226A5B;
+  --secondary-light-color:  #50BF9F;
+  --accent-color:           #F17229;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root, * {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.moon-shape {
+  background: #aaa;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: 0 0 30px #ccc;
+          box-shadow: 0 0 30px #ccc;
+}
+
+.moon-craters {
+  background: #666;
+  position: absolute;
+  -webkit-box-shadow: inset 1px 1px 2px #444;
+          box-shadow: inset 1px 1px 2px #444;
+}
+
+.moon-craters.crater1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 70px;
+  left: 14px;
+}
+
+.moon-craters.crater2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 30px;
+  left: 50px;
+}
+
+.moon-craters.crater3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 40px;
+  right: 30px;
+}
+
+.moon-craters.crater4 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 40px;
+}
+
+.moon-craters.crater5 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 50px;
+}
+
+.moon-craters.crater6 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  bottom: 40px;
+  left: 60px;
+}
+
+.moon-craters.crater7 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: 70px;
+  left: 60px;
+}
+
+.main-accent {
+  color: var(--accent-color);
+}
+
+#welcome-screen {
+  background: var(--main-dark-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome-text {
+  color: var(--main-light-color);
+  font-size: 22px;
+  text-align: center;
+}
+
+.welcome-text p {
+  margin: 10px auto;
+}
+
+.welcome-cta {
+  background: none;
+  padding: 4px 10px;
+  margin-top: 10px;
+  border: 1px solid var(--secondary-dark-color);
+  color: var(--secondary-light-color);
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

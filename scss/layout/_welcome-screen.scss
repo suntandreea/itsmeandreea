@@ -1,0 +1,33 @@
+#welcome-screen {
+    background: var(--main-dark-color);
+    width: 100vw;
+    height: 100vh; 
+}
+
+.welcome-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome-text {
+    color: var(--main-light-color);
+    font-size: 22px;
+    text-align: center;
+
+    p {
+        margin: 10px auto;
+    }
+}
+
+.welcome-cta {
+    background: none;
+    padding: 4px 10px;
+    margin-top: 10px;
+    border: 1px solid var(--secondary-dark-color);
+    color: var(--secondary-light-color);
+    cursor: pointer;
+}
