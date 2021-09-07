@@ -3,6 +3,7 @@
     @include round(200px);
     position: relative;
     box-shadow: 0 0 30px #ccc;
+    z-index: 2;
 }
 
 .moon-craters {
