@@ -8,7 +8,7 @@
     position: relative;
     box-shadow: none;
     z-index: 2;
-    animation: moon-glow 2s ease-in-out 15s infinite;
+    animation: moon-glow 2s ease-in-out 16.5s infinite;
 }
 
 @keyframes moon-glow {
@@ -72,43 +72,34 @@
 }
 
 .moon-shadow {
-    @include round(400px);
     background: hsla(222, 45%, 10%, 0.7);
     position: absolute;
     z-index: 2;
-    top: -100px;
-    left: -450px;
-    animation: moon-phases 15s linear 1s 1; 
+    animation: moon-phases 15s linear 1s 1 normal forwards;
 }
 
 @keyframes moon-phases {
-	20% {
-		top: -50px;
-		left: -200px;
-		@include round(300px);
-	}
-	40% {
+    0% {
+        @include round(260px);
+        top: -30px;
+        left: -260px;
+    }
+	45% {
 		@include round(200px);
 		top: 0px;
 		left: 0px;
 	}
-	60% {
+	55% {
 		@include round(200px);
 		top: 0px;
 		left: 0px;
 	}
-	80% {
-		top: -50px;
-		left: 200px;
-		@include round(300px);
+    99% {
+		@include round(260px);
+		top: -30px;
+        left: 260px;
 	}
-	99% {
-		@include round(400px);
-		top: -100px;
-		left: 250px;
-	}
-	100% {
-		left: 300px;
-		display: none;
-	}
+    100% {
+        display: none;
+    }
 }
