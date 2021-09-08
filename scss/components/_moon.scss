@@ -1,60 +1,114 @@
+.moon {
+    position: relative;
+}
+
 .moon-shape {
-    background: #aaa;
+    background: hsl(222, 45%, 87%);
     @include round(200px);
     position: relative;
-    box-shadow: 0 0 30px #ccc;
+    box-shadow: none;
     z-index: 2;
+    animation: moon-glow 2s ease-in-out 15s infinite;
+}
+
+@keyframes moon-glow {
+    50% {
+        box-shadow: 0 0 20px hsl(222, 45%, 92%);
+    }
 }
 
 .moon-craters {
-    background: #666;
+    background: hsla(222, 45%, 10%, 0.4);
     position: absolute;
-    box-shadow: inset 1px 1px 2px #444;
+    box-shadow: inset 1px 1px 2px hsla(222, 45%, 10%, 0.5);
 
     &.crater1 {
         @include round(20px);
-        top: 70px;
+        top: 80px;
         left: 14px;
-        
+        transform: rotate(25deg) skew(10deg);
+        box-shadow: none;
+        opacity: 0.4;
     }
-
     &.crater2 {
         @include round(30px);
         top: 30px;
         left: 50px;
-        
+        opacity: 0.6;
     }
-    
     &.crater3 {
-
-        @include round(50px);
-        top: 40px;
-        right: 30px;
-    }
-    
-    &.crater4 {
-        @include round(30px);
-        bottom: 30px;
+        @include round(25px);
+        top: 45px;
         right: 40px;
+        transform: rotate(65deg) skew(20deg);
+        box-shadow: none;
+        opacity: 0.2;
     }
-    
+    &.crater4 {
+        @include round(32px);
+        bottom: 60px;
+        right: 20px;
+        opacity: 0.5;
+    }
     &.crater5 {
-        @include round(80px);
+        @include round(40px);
         bottom: 20px;
         right: 50px;
+        transform: skew(20deg);
+        opacity: 0.8;
     }
-    
     &.crater6 {
-        @include round(20px);
+        @include round(22px);
         bottom: 40px;
         left: 60px;
-        
-        
+        opacity: 0.6;
     }
-    
     &.crater7 {
-        @include round(40px);
-        bottom: 70px;
-        left: 60px;
+        @include round(36px);
+        bottom: 82px;
+        left: 90px;
+        transform: rotate(25deg) skew(14deg);
     }
+}
+
+.moon-shadow {
+    @include round(400px);
+    background: hsla(222, 45%, 10%, 0.7);
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    left: -450px;
+    animation: moon-phases 15s linear 1s 1; 
+}
+
+@keyframes moon-phases {
+	20% {
+		top: -50px;
+		left: -200px;
+		@include round(300px);
+	}
+	40% {
+		@include round(200px);
+		top: 0px;
+		left: 0px;
+	}
+	60% {
+		@include round(200px);
+		top: 0px;
+		left: 0px;
+	}
+	80% {
+		top: -50px;
+		left: 200px;
+		@include round(300px);
+	}
+	99% {
+		@include round(400px);
+		top: -100px;
+		left: 250px;
+	}
+	100% {
+		left: 300px;
+		display: none;
+	}
 }
