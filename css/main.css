@@ -79,8 +79,9 @@ table {
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 2;
-  -webkit-animation: moon-glow 2s ease-in-out 16.5s infinite;
-          animation: moon-glow 2s ease-in-out 16.5s infinite;
+  -webkit-animation: moon-glow 2s ease-in-out infinite;
+          animation: moon-glow 2s ease-in-out infinite;
+  overflow: hidden;
 }
 
 @-webkit-keyframes moon-glow {
@@ -180,77 +181,97 @@ table {
 
 .moon-shadow {
   background: rgba(14, 21, 37, 0.7);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
   position: absolute;
   z-index: 2;
-  -webkit-animation: moon-phases 15s linear 1s 1 normal forwards;
-          animation: moon-phases 15s linear 1s 1 normal forwards;
+  -webkit-animation: moon-phases 30s linear 5s infinite normal forwards;
+          animation: moon-phases 30s linear 5s infinite normal forwards;
 }
 
 @-webkit-keyframes moon-phases {
   0% {
+    visibility: visible;
     width: 260px;
     height: 260px;
     border-radius: 50%;
     top: -30px;
     left: -260px;
   }
-  45% {
+  25% {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top: 0px;
     left: 0px;
   }
-  55% {
+  35% {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top: 0px;
     left: 0px;
   }
-  99% {
+  60% {
     width: 260px;
     height: 260px;
     border-radius: 50%;
     top: -30px;
     left: 260px;
   }
+  61% {
+    visibility: hidden;
+  }
   100% {
-    display: none;
+    visibility: hidden;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    top: -30px;
+    left: -260px;
   }
 }
 
 @keyframes moon-phases {
   0% {
+    visibility: visible;
     width: 260px;
     height: 260px;
     border-radius: 50%;
     top: -30px;
     left: -260px;
   }
-  45% {
+  25% {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top: 0px;
     left: 0px;
   }
-  55% {
+  35% {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top: 0px;
     left: 0px;
   }
-  99% {
+  60% {
     width: 260px;
     height: 260px;
     border-radius: 50%;
     top: -30px;
     left: 260px;
   }
+  61% {
+    visibility: hidden;
+  }
   100% {
-    display: none;
+    visibility: hidden;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    top: -30px;
+    left: -260px;
   }
 }
 
@@ -284,211 +305,211 @@ table {
 .stars.star1 {
   -webkit-animation-name: shower1;
           animation-name: shower1;
-  -webkit-animation-delay: 21s;
-          animation-delay: 21s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .stars.star2 {
   -webkit-animation-name: shower2;
           animation-name: shower2;
-  -webkit-animation-delay: 19.3s;
-          animation-delay: 19.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .stars.star3 {
   -webkit-animation-name: shower3;
           animation-name: shower3;
-  -webkit-animation-delay: 18.9s;
-          animation-delay: 18.9s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 
 .stars.star4 {
   -webkit-animation-name: shower4;
           animation-name: shower4;
-  -webkit-animation-delay: 17s;
-          animation-delay: 17s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .stars.star5 {
   -webkit-animation-name: shower5;
           animation-name: shower5;
-  -webkit-animation-delay: 18.5s;
-          animation-delay: 18.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .stars.star6 {
   -webkit-animation-name: shower6;
           animation-name: shower6;
-  -webkit-animation-delay: 17.8s;
-          animation-delay: 17.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .stars.star7 {
   -webkit-animation-name: shower7;
           animation-name: shower7;
-  -webkit-animation-delay: 20.6s;
-          animation-delay: 20.6s;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
 }
 
 .stars.star8 {
   -webkit-animation-name: shower8;
           animation-name: shower8;
-  -webkit-animation-delay: 19.2s;
-          animation-delay: 19.2s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
 }
 
 .stars.star9 {
   -webkit-animation-name: shower9;
           animation-name: shower9;
-  -webkit-animation-delay: 20.7s;
-          animation-delay: 20.7s;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
 }
 
 .stars.star10 {
   -webkit-animation-name: shower10;
           animation-name: shower10;
-  -webkit-animation-delay: 19.4s;
-          animation-delay: 19.4s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
 }
 
 .stars.star11 {
   -webkit-animation-name: shower11;
           animation-name: shower11;
-  -webkit-animation-delay: 18.1s;
-          animation-delay: 18.1s;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
 }
 
 .stars.star12 {
   -webkit-animation-name: shower12;
           animation-name: shower12;
-  -webkit-animation-delay: 17.7s;
-          animation-delay: 17.7s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .stars.star13 {
   -webkit-animation-name: shower13;
           animation-name: shower13;
-  -webkit-animation-delay: 18.5s;
-          animation-delay: 18.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .stars.star14 {
   -webkit-animation-name: shower14;
           animation-name: shower14;
-  -webkit-animation-delay: 17.2s;
-          animation-delay: 17.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .stars.star15 {
   -webkit-animation-name: shower15;
           animation-name: shower15;
-  -webkit-animation-delay: 20.3s;
-          animation-delay: 20.3s;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
 }
 
 .stars.star16 {
   -webkit-animation-name: shower16;
           animation-name: shower16;
-  -webkit-animation-delay: 19.9s;
-          animation-delay: 19.9s;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
 }
 
 .stars.star17 {
   -webkit-animation-name: shower17;
           animation-name: shower17;
-  -webkit-animation-delay: 20.4s;
-          animation-delay: 20.4s;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
 }
 
 .stars.star18 {
   -webkit-animation-name: shower18;
           animation-name: shower18;
-  -webkit-animation-delay: 19.6s;
-          animation-delay: 19.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 
 .stars.star19 {
   -webkit-animation-name: shower19;
           animation-name: shower19;
-  -webkit-animation-delay: 19s;
-          animation-delay: 19s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .stars.star20 {
   -webkit-animation-name: shower20;
           animation-name: shower20;
-  -webkit-animation-delay: 17.1s;
-          animation-delay: 17.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .stars.star21 {
   -webkit-animation-name: shower21;
           animation-name: shower21;
-  -webkit-animation-delay: 18s;
-          animation-delay: 18s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .stars.star22 {
   -webkit-animation-name: shower22;
           animation-name: shower22;
-  -webkit-animation-delay: 17.8s;
-          animation-delay: 17.8s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .stars.star23 {
   -webkit-animation-name: shower23;
           animation-name: shower23;
-  -webkit-animation-delay: 20.3s;
-          animation-delay: 20.3s;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
 }
 
 .stars.star24 {
   -webkit-animation-name: shower24;
           animation-name: shower24;
-  -webkit-animation-delay: 19.6s;
-          animation-delay: 19.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 
 .stars.star25 {
   -webkit-animation-name: shower25;
           animation-name: shower25;
-  -webkit-animation-delay: 20.9s;
-          animation-delay: 20.9s;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
 }
 
 .stars.star26 {
   -webkit-animation-name: shower26;
           animation-name: shower26;
-  -webkit-animation-delay: 19s;
-          animation-delay: 19s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .stars.star27 {
   -webkit-animation-name: shower27;
           animation-name: shower27;
-  -webkit-animation-delay: 18.5s;
-          animation-delay: 18.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .stars.star28 {
   -webkit-animation-name: shower28;
           animation-name: shower28;
-  -webkit-animation-delay: 17.1s;
-          animation-delay: 17.1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .stars.star29 {
   -webkit-animation-name: shower29;
           animation-name: shower29;
-  -webkit-animation-delay: 18.2s;
-          animation-delay: 18.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .stars.star30 {
   -webkit-animation-name: shower30;
           animation-name: shower30;
-  -webkit-animation-delay: 18s;
-          animation-delay: 18s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes shower1 {

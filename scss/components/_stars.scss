@@ -18,36 +18,36 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     
-    &.star1 { animation-name: shower1; animation-delay: 21s; }
-    &.star2 { animation-name: shower2; animation-delay: 19.3s; }
-    &.star3 { animation-name: shower3; animation-delay: 18.9s; }
-    &.star4 { animation-name: shower4; animation-delay: 17s; }
-    &.star5 { animation-name: shower5; animation-delay: 18.5s; }
-    &.star6 { animation-name: shower6; animation-delay: 17.8s; }
-    &.star7 { animation-name: shower7; animation-delay: 20.6s; }
-    &.star8 { animation-name: shower8; animation-delay: 19.2s; }
-    &.star9 { animation-name: shower9; animation-delay: 20.7s; }
-    &.star10 { animation-name: shower10; animation-delay: 19.4s; }
-    &.star11 { animation-name: shower11; animation-delay: 18.1s; }
-    &.star12 { animation-name: shower12; animation-delay: 17.7s; }
-    &.star13 { animation-name: shower13; animation-delay: 18.5s; }
-    &.star14 { animation-name: shower14; animation-delay: 17.2s; }
-    &.star15 { animation-name: shower15; animation-delay: 20.3s; }
-    &.star16 { animation-name: shower16; animation-delay: 19.9s; }
-    &.star17 { animation-name: shower17; animation-delay: 20.4s; }
-    &.star18 { animation-name: shower18; animation-delay: 19.6s; }
-    &.star19 { animation-name: shower19; animation-delay: 19s; }
-    &.star20 { animation-name: shower20; animation-delay: 17.1s; }
-    &.star21 { animation-name: shower21; animation-delay: 18s; }
-    &.star22 { animation-name: shower22; animation-delay: 17.8s; }
-    &.star23 { animation-name: shower23; animation-delay: 20.3s; }
-    &.star24 { animation-name: shower24; animation-delay: 19.6s; }
-    &.star25 { animation-name: shower25; animation-delay: 20.9s; }
-    &.star26 { animation-name: shower26; animation-delay: 19s; }
-    &.star27 { animation-name: shower27; animation-delay: 18.5s; }
-    &.star28 { animation-name: shower28; animation-delay: 17.1s; }
-    &.star29 { animation-name: shower29; animation-delay: 18.2s; }
-    &.star30 { animation-name: shower30; animation-delay: 18s; }
+    &.star1 { animation-name: shower1; animation-delay: 4s; }
+    &.star2 { animation-name: shower2; animation-delay: 2.3s; }
+    &.star3 { animation-name: shower3; animation-delay: 1.9s; }
+    &.star4 { animation-name: shower4; animation-delay: 0s; }
+    &.star5 { animation-name: shower5; animation-delay: 1.5s; }
+    &.star6 { animation-name: shower6; animation-delay: 0.8s; }
+    &.star7 { animation-name: shower7; animation-delay: 3.6s; }
+    &.star8 { animation-name: shower8; animation-delay: 2.2s; }
+    &.star9 { animation-name: shower9; animation-delay: 3.7s; }
+    &.star10 { animation-name: shower10; animation-delay: 2.4s; }
+    &.star11 { animation-name: shower11; animation-delay: 1.1s; }
+    &.star12 { animation-name: shower12; animation-delay: 0.7s; }
+    &.star13 { animation-name: shower13; animation-delay: 1.5s; }
+    &.star14 { animation-name: shower14; animation-delay: 0.2s; }
+    &.star15 { animation-name: shower15; animation-delay: 3.3s; }
+    &.star16 { animation-name: shower16; animation-delay: 2.9s; }
+    &.star17 { animation-name: shower17; animation-delay: 3.4s; }
+    &.star18 { animation-name: shower18; animation-delay: 2.6s; }
+    &.star19 { animation-name: shower19; animation-delay: 2s; }
+    &.star20 { animation-name: shower20; animation-delay: 0.1s; }
+    &.star21 { animation-name: shower21; animation-delay: 1s; }
+    &.star22 { animation-name: shower22; animation-delay: 0.4s; }
+    &.star23 { animation-name: shower23; animation-delay: 3.3s; }
+    &.star24 { animation-name: shower24; animation-delay: 2.6s; }
+    &.star25 { animation-name: shower25; animation-delay: 3.9s; }
+    &.star26 { animation-name: shower26; animation-delay: 2s; }
+    &.star27 { animation-name: shower27; animation-delay: 1.5s; }
+    &.star28 { animation-name: shower28; animation-delay: 0.2s; }
+    &.star29 { animation-name: shower29; animation-delay: 1.2s; }
+    &.star30 { animation-name: shower30; animation-delay: 1s; }
 
     @keyframes shower1{0%{top:-10px;left:-10px;}33%{top:-10px;left:1277px;}66%{top:970px;left:977px;}100%{top:1270px;left:677px;}}
     @keyframes shower2{0%{top:-10px;left:-10px;}33%{top:-10px;left:1432px;}66%{top:602px;left:1132px;}100%{top:902px;left:832px;}}

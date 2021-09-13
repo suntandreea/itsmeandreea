@@ -8,7 +8,8 @@
     position: relative;
     box-shadow: none;
     z-index: 2;
-    animation: moon-glow 2s ease-in-out 16.5s infinite;
+    animation: moon-glow 2s ease-in-out infinite;
+    overflow: hidden;
 }
 
 @keyframes moon-glow {
@@ -73,33 +74,41 @@
 
 .moon-shadow {
     background: hsla(222, 45%, 10%, 0.7);
+    filter: blur(2px);
     position: absolute;
     z-index: 2;
-    animation: moon-phases 15s linear 1s 1 normal forwards;
+    animation: moon-phases 30s linear 5s infinite normal forwards;
 }
 
 @keyframes moon-phases {
     0% {
+        visibility: visible;
         @include round(260px);
         top: -30px;
         left: -260px;
     }
-	45% {
+	25% {
 		@include round(200px);
 		top: 0px;
 		left: 0px;
 	}
-	55% {
+	35% {
 		@include round(200px);
 		top: 0px;
 		left: 0px;
 	}
-    99% {
+    60% {
 		@include round(260px);
 		top: -30px;
         left: 260px;
 	}
+    61% {
+        visibility: hidden;
+    }
     100% {
-        display: none;
+        visibility: hidden;
+        @include round(260px);
+        top: -30px;
+        left: -260px;
     }
 }
