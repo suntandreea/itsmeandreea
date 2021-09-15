@@ -11,7 +11,7 @@
     
     <div id="main-wrapper">
 
-        <div id="welcome-screen">
+        <div id="welcome-screen" class="page-section">
 
             <div class="welcome-container">
 
@@ -29,9 +29,9 @@
                 </div> <!-- end of moon -->
     
                 <div class="welcome-text">
-                    <p>Hi! It's me, <span class="main-accent">Andreea Cozariuc</span>,</p>
-                    <p>and I'm an enthusiastic frontend developer.</p>
-                    <button class="welcome-cta">About me</button>
+                    <p>Hi! It's me, <span class="main-accent">Andreea</span>,</p>
+                    <p>and I'm an enthusiastic junior frontend developer.</p>
+                    <a href="#about-screen"><button class="welcome-cta">About me <span>»</span></button></a>
                 </div> <!-- end of welcome-text -->
             </div> <!-- end of welcome-container -->
 
@@ -253,20 +253,123 @@
         </div> <!-- end of welcome-screen -->
 
         <div id="main-navigation">
-            <nav></nav>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#welcome-screen">Home</a></li>
+                    <li><a href="#about-screen">About</a></li>
+                    <li><a href="#portfolio-screen">Portfolio</a></li>
+                    <li><a href="#blog-screen">Blog</a></li>
+                    <li><a href="#contact-screen">Contact</a></li>
+                </ul>
+            </nav>
         </div> <!-- end of main-navigation -->
 
-        <div id="skills-screen">
+        <div id="about-screen" class="page-section">
+            <h1 class="screen-title"><span>about me</span></h1>
+
+            <div class="about-container">
+                
+                <div class="about-icons">
+                    shalalala
+                </div> <!-- end of about-icons -->
+
+                <div class="about-inner">
+                    
+                    <div class="about-summary">
+                        <img src="./img/about.jpg" alt="A photo of me, Andreea!" class="about-img polaroid">
+                        
+                        <h2>About me?</h2>
+
+                        <p>Well, I'm looking for a warm and dynamic company that invests in its employees, with managers that know how to be real leaders, that listen to their team and don't take credit for other people's efforts, and with hard working colleagues that support and help each other. I wish to be loyal to a company that is in turn loyal to me.</p>
+                        <p>Sounds incredible, but I'm not looking for 100 companies like this, but just for that one that I can be part of.</p> 
+                        <p>Heard anything about such an opportunity? <a href="#contact-screen">I'm inviting you to a discussion so we can know each other.</a></p>
+                    </div> <!-- end of about-summary -->
+                    
+                    <div class="about-stats">
+                        <div class="about-skills">
+                                            
+                            <div class="skill-name">CSS3</div>
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-name">jQuery</div>
+                            <div class="skill-name">Node.JS</div>
+                            <div class="skill-name">Angular</div>
+                            <div class="skill-name">Git</div>
+                            <div class="skill-name">Photoshop</div>
+
+                            <div class="skill-box">
+                                
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-90"></div>
+                                    <div class="skill-percent">90%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-90"></div>
+                                    <div class="skill-percent">90%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-70"></div>
+                                    <div class="skill-percent">70%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-50"></div>
+                                    <div class="skill-percent">50%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-20"></div>
+                                    <div class="skill-percent">20%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-10"></div>
+                                    <div class="skill-percent">10%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-80"></div>
+                                    <div class="skill-percent">80%</div>
+                                </div>
+                                <div class="skill-row">
+                                    <div class="skill-progress pg-60"></div>
+                                    <div class="skill-percent">60%</div>
+                                </div>
+                            </div>
+
+                      </div> <!-- end of about-skills -->
+
+                        <div class="about-more">
+                            <h3>Wanna know more?</h3>
+                            <ul>
+                                <li><span>Print an HTML summary of my resume <a href="#">here</a>.</span></li>
+                                <li><span>Download a PDF summary of my resume <a href="#">here</a>.</span></li>
+                                <li><span>Read more about my extensive work experience on <a href="https://www.linkedin.com/in/andreeacozariuc/?locale=en_US">LinkedIn</a>.</span></li>
+                            </ul>
+                        </div> <!-- end of about-more -->
+                    </div>
+
+
+                </div> <!-- end of about-inner -->
+                
+                
+                
+            </div> <!-- end of about-container -->
+
+
 
         </div> <!-- end of skills-screen -->
 
-        <div id="portfolio-screen">
+        <div id="portfolio-screen" class="page-section">
+            <h1 class="screen-title"><span>portfolio</span></h1>
 
         </div> <!-- end of portfolio-screen -->
 
-        <footer>
+        <div id="blog-screen" class="page-section">
+            <h1 class="screen-title"><span>blog</span></h1>
 
-        </footer>
+        </div> <!-- end of blog-screen -->
+
+        <div id="contact-screen" class="page-section">
+            <h1 class="screen-title"><span>contact me</span></h1>
+            <footer></footer>
+        </div> <!-- end of contact-screen -->    
         
     </div> <!-- end of main-wrapper -->
 

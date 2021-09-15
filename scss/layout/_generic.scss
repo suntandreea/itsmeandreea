@@ -1,3 +1,11 @@
 .main-accent {
     color: var(--accent-color);
 }
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+}

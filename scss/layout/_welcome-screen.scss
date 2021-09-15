@@ -1,7 +1,5 @@
 #welcome-screen {
     background: var(--main-dark-color);
-    width: 100vw;
-    height: 100vh;
     position: relative;
 }
 
@@ -16,21 +14,44 @@
 
 .welcome-text {
     color: var(--main-light-color);
-    font-size: 30px;
+    font-size: 2.2rem;
     text-align: center;
     position: relative;
     z-index: 2;
+    width: 100%;
 
     p {
-        margin: 10px auto;
+        margin: 3% auto;
+        padding: 0 2%;
+        word-wrap: no-wrap;
     }
 }
 
 .welcome-cta {
     background: none;
-    padding: 4px 10px;
-    margin-top: 10px;
+    padding: 1% 2%;
+    margin-top: 2%;
+    font-size: 1.4rem;
     border: 1px solid var(--main-light-color);
+    border-radius: 3%;
     color: var(--main-light-color);
     cursor: pointer;
+    transition-property: border, background;
+    transition-duration: 0.5s;
+ 
+    span {
+        display: inline-block;
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
+
+    &:hover, &:active, &:focus {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+
+        span {
+            transform: rotate(90deg);
+        }
+    }
+
 }

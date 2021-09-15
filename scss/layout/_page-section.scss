@@ -1,0 +1,29 @@
+.page-section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px 20px 20px;
+    box-sizing: border-box;
+}
+
+.screen-title {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: lowercase;
+    margin-bottom: 30px;
+
+    span {
+        position: relative;
+        
+        &::after {
+            content: "⬤ ⬤ ⬤";
+            width: 100%; 
+            font-size: 0.5rem;
+            font-style: normal;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+}
