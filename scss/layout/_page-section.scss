@@ -1,8 +1,9 @@
 .page-section {
-    width: 100vw;
+    // width: 100vw;
     min-height: 100vh;
     padding: 60px 20px 20px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .screen-title {
@@ -11,7 +12,8 @@
     font-weight: 600;
     font-style: italic;
     text-transform: lowercase;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
 
     span {
         position: relative;

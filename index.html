@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href ="./css/dist/main.min.css">
+    <script src="https://kit.fontawesome.com/4b39ae91a0.js" crossorigin="anonymous"></script>
     <title>Hi! It's me, Andreea!</title>
 </head>
 <body>
@@ -269,14 +270,35 @@
 
             <div class="about-container">
                 
-                <div class="about-icons">
-                    shalalala
+                <div class="about-icons icons-wrapper">
+                    <div class="icon-box">
+                        <div class="hexa-icons"></div>
+                        <h2>Header 1</h2>
+                        <p>Paragraph 1</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"></div>
+                        <h2>Header 2</h2>
+                        <p>Paragraph 2</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"></div>
+                        <h2>Header 3</h2>
+                        <p>Paragraph 3</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"></div>
+                        <h2>Header 4</h2>
+                        <p>Paragraph 4</p>
+                    </div>
+
+
                 </div> <!-- end of about-icons -->
 
                 <div class="about-inner">
                     
                     <div class="about-summary">
-                        <img src="./img/about.jpg" alt="A photo of me, Andreea!" class="about-img polaroid">
+                        <img src="./img/about.jpg" alt="A photo of me, Andreea!" class="about-img">
                         
                         <h2>About me?</h2>
 
@@ -298,7 +320,6 @@
                             <div class="skill-name">Photoshop</div>
 
                             <div class="skill-box">
-                                
                                 <div class="skill-row">
                                     <div class="skill-progress pg-90"></div>
                                     <div class="skill-percent">90%</div>
@@ -331,44 +352,89 @@
                                     <div class="skill-progress pg-60"></div>
                                     <div class="skill-percent">60%</div>
                                 </div>
-                            </div>
+                            </div> <!-- end of skill-box -->
 
-                      </div> <!-- end of about-skills -->
+                        </div> <!-- end of about-skills -->
 
-                        <div class="about-more">
-                            <h3>Wanna know more?</h3>
-                            <ul>
-                                <li><span>Print an HTML summary of my resume <a href="#">here</a>.</span></li>
-                                <li><span>Download a PDF summary of my resume <a href="#">here</a>.</span></li>
-                                <li><span>Read more about my extensive work experience on <a href="https://www.linkedin.com/in/andreeacozariuc/?locale=en_US">LinkedIn</a>.</span></li>
-                            </ul>
-                        </div> <!-- end of about-more -->
-                    </div>
+                        <h2>Wanna know more?</h2>
+                        <ul class="about-more">
+                            <li><span>Print an HTML summary of my resume <a href="#">here</a>.</span></li>
+                            <li><span>Download a PDF summary of my resume <a href="#">here</a>.</span></li>
+                            <li><span>Read more about my extensive work experience on <a href="https://www.linkedin.com/in/andreeacozariuc/?locale=en_US">LinkedIn</a>.</span></li>
+                        </ul>
+                    </div> <!-- end of about-stats -->
 
-
-                </div> <!-- end of about-inner -->
-                
-                
+                </div> <!-- end of about-inner -->              
                 
             </div> <!-- end of about-container -->
-
-
 
         </div> <!-- end of skills-screen -->
 
         <div id="portfolio-screen" class="page-section">
             <h1 class="screen-title"><span>portfolio</span></h1>
 
+            <div class="portfolio-container">
+
+                <div class="portfolio-box">
+
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+                    <div class="projects"><img src="./img/proj1.jpg" alt="https://web.archive.org/web/20170515053836/http://devacademy.ro/"></div>
+
+                </div>
+                         
+            </div>            
+
         </div> <!-- end of portfolio-screen -->
 
-        <div id="blog-screen" class="page-section">
+        <!-- <div id="blog-screen" class="page-section">
             <h1 class="screen-title"><span>blog</span></h1>
-
-        </div> <!-- end of blog-screen -->
+        </div> -->
+         <!-- end of blog-screen -->
 
         <div id="contact-screen" class="page-section">
+
+            <div class="contact-divider"></div>
+
             <h1 class="screen-title"><span>contact me</span></h1>
-            <footer></footer>
+
+            <form>
+                Want to reach me out? 
+
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea name="comments" id="comments" placeholder="Your message here ..."></textarea>
+                <input type="submit" id="submit" value="Submit">
+
+            </form>
+
+            <footer>
+                <div class="social-icons icons-wrapper">
+
+                    <div class="icon-box">
+                        <div class="hexa-icons"><a href="https://github.com/suntandreea" target="_blank"><i class="fab fa-github"></i></a></div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"><a href="https://codepen.io/suntandreea" target="_blank"><i class="fab fa-codepen"></i></a></div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"><a href="https://www.freecodecamp.org/suntandreea" target="_blank"><i class="fab fa-free-code-camp"></i></a></div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="hexa-icons"><a href="https://www.linkedin.com/in/andreeacozariuc/?locale=en_US" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+                    </div>
+
+                </div>
+
+                <p>ANDREEA COZARIUC ©2021</p>
+            </footer>
+
         </div> <!-- end of contact-screen -->    
         
     </div> <!-- end of main-wrapper -->

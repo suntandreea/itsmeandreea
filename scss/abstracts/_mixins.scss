@@ -11,3 +11,8 @@
     @include square($size);
     border-radius: 50%;
 }
+
+@mixin screen-sizing {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 80px);
+}

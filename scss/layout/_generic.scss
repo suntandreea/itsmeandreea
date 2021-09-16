@@ -1,9 +1,13 @@
+#main-wrapper {
+    box-sizing: border-box;
+}
+
 .main-accent {
     color: var(--accent-color);
 }
 
 a {
-    color: var(--accent-color);
+    color: var(--secondary-dark-color);
     text-decoration: none;
     &:hover, &:active {
         text-decoration: underline;
