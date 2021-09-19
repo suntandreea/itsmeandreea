@@ -1,0 +1,203 @@
+// #resume-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100vw;
+//     height: 100vh;
+// }
+
+@media print {
+    body {
+        width: 21cm;
+        height: 29.7cm;
+        // margin: 3cm 4.5cm; 
+   } 
+}
+
+.resume-container {
+    width: 21cm;
+    height: 29.7cm;
+    box-sizing: border-box;
+    border: 10px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(27, 1fr);
+    grid-template-rows: repeat(45, 1fr);
+    gap: 2px 2px;
+    font-size: 15px;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
+}
+
+
+.resume-title, .resume-name, .resume-role {
+    text-transform: uppercase;
+}
+
+.resume-title {
+    border-bottom: 1px solid var(--accent-color);
+    font-size: 1.2em;
+    position: relative;
+    z-index: -1;
+
+    span {
+        background: white;
+        position: absolute;
+        bottom: -4px;
+    }
+}
+
+.firstname {
+    border-bottom: 4px solid var(--accent-color);
+    position: relative;
+
+    span {
+        background: white;
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+    }
+}
+
+.lastname {
+    padding-top: 30px;
+}
+
+.sk-box {
+    @include flex-center;
+    flex-flow: column nowrap;
+    height: 120px;
+
+    .sk-prog {
+        font-size: 0.6em;
+    }
+
+    .sk-icon {
+        font-size: 3em;
+        margin: 10px 0;
+    }
+
+    .sk-name {
+        font-size: 0.8em;
+    }
+
+}
+
+.resume-name {
+    font-size: 4.9em;
+    text-align: right;
+}
+
+.resume-role {
+    font-size: 1.68em;
+}
+
+.resume-summary {
+    line-height: 1.1em;
+    text-align: justify;
+}
+
+.info-icon {
+    @include flex-center;
+    font-size: 1.4em;
+}
+
+.lang-box, .edu-box {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 6px;
+    font-size: 0.9em;
+    p {
+        width: 100%;
+    }
+}
+
+.edu-box {
+    p:first-child {
+        text-transform: uppercase;
+    }
+}
+
+.vol-company, .job-company {
+    span {
+        text-transform: uppercase;
+    }
+}
+
+.vol-url, .job-url {
+    font-size: 0.7em; 
+}
+
+.vol-years, .job-years {
+    font-size: 0.8em;
+}
+
+.title-cv, .resume-name, .resume-role, .resume-summary, .edu-box, .job-company.exp1, .job-url.exp1, .job-company.exp2, .job-url.exp2 { grid-column: 1 / 14; }
+
+.vol-name.vol1, .vol-years.vol1, .job-name.exp1, .job-years.exp1, .job-name.exp2, .job-years.exp2  { grid-column: 2 / 14; }
+
+.title-info, .title-lang, .lang-box, .title-edu, .edu-box, .vol-name.vol2, .vol-years.vol2,.job-company.exp3, .job-url.exp3 { grid-column: 15 / 28; }
+
+.job-name.exp3, .job-years.exp3, .job-name.exp4, .job-years.exp4, .job-name.exp5, .job-years.exp5 { grid-column: 16 / 28; }
+
+.title-exp, .title-vol, .vol-company, .vol-url, .title-skills { grid-column: 1 / 28; }
+
+.info-icon { grid-column: 15 / 17; }
+.info-link { grid-column: 17 / 28; }
+
+.box1 { grid-column: 1 / 4; }
+.box2 { grid-column: 4 / 7; }
+.box3 { grid-column: 7 / 10; }
+.box4 { grid-column: 10 / 13; }
+.box5 { grid-column: 13 / 16; }
+.box6 { grid-column: 16 / 19; }
+.box7 { grid-column: 19 / 22; }
+.box8 { grid-column: 22 / 25; }
+.box9 { grid-column: 25 / 28; }
+
+.title-cv, .title-info { grid-row: 1 / 2; }
+.firstname { grid-row: 3 / 6; }
+.lastname { grid-row: 6 / 9; }
+.resume-role { grid-row: 10 / 12; }
+.resume-summary { grid-row: 12 / 18; }
+
+.info1  { grid-row: 3 / 4; }
+.info2  { grid-row: 4 / 5; }
+.info3  { grid-row: 5 / 6; }
+.info4  { grid-row: 6 / 7; }
+.info5  { grid-row: 7 / 8; }
+.info6  { grid-row: 8 / 9; }
+.info7  { grid-row: 9 / 10; }
+
+.title-lang { grid-row: 11 / 12; }
+.lang-box{ grid-row: 12 / 13; }
+.title-edu { grid-row: 14 / 15; }
+.edu-box { grid-row: 15 / 17; }
+
+.title-vol { grid-row: 18 / 19; }
+.vol-company { grid-row: 20/ 21; }
+.vol-url { grid-row: 21 / 22; }
+.vol-name { grid-row: 23 / 24; }
+.vol-years { grid-row: 24 / 25; }
+
+.title-exp { grid-row: 26 / 27; }
+.job-company.exp1, .job-company.exp3 { grid-row: 28 / 29; }
+.job-url.exp1, .job-url.exp3 { grid-row: 29 / 30; }
+.job-name.exp1, .job-name.exp3 { grid-row: 31 / 32; }
+.job-years.exp1,.job-years.exp3 { grid-row: 32 / 33; }
+.job-company.exp2, .job-name.exp4 { grid-row: 34 / 35; }
+.job-url.exp2, .job-years.exp4 { grid-row: 35 / 36; }
+.job-name.exp2,  .job-name.exp5 { grid-row: 37 / 38; }
+.job-years.exp2, .job-years.exp5 { grid-row: 38 / 39; }
+.title-skills { grid-row: 40 / 41; }
+.sk-box { grid-row: 41 / 45; }
