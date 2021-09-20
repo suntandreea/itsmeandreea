@@ -1871,6 +1871,16 @@ table {
   top: 0;
 }
 
+*::-moz-selection {
+  background: var(--accent-color);
+  color: var(--main-light-color);
+}
+
+*::selection {
+  background: var(--accent-color);
+  color: var(--main-light-color);
+}
+
 #main-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2351,452 +2361,325 @@ footer {
   bottom: 0;
 }
 
-@media print {
-  body {
-    width: 21cm;
-    height: 29.7cm;
-  }
+#resume-wrapper {
+  background: rgba(14, 21, 37, 0.4);
+  width: 21cm;
+  height: 29.7cm;
+  padding-left: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .resume-container {
-  width: 21cm;
-  height: 29.7cm;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 10px solid var(--accent-color);
-  color: var(--accent-color);
-  padding: 10px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[27];
-      grid-template-columns: repeat(27, 1fr);
-  -ms-grid-rows: (1fr)[45];
-      grid-template-rows: repeat(45, 1fr);
-  gap: 2px 2px;
-  font-size: 15px;
-}
-
-.resume-container div {
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.resume-container a {
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-.resume-title, .resume-name, .resume-role {
-  text-transform: uppercase;
-}
-
-.resume-title {
-  border-bottom: 1px solid var(--accent-color);
-  font-size: 1.2em;
-  position: relative;
-  z-index: -1;
-}
-
-.resume-title span {
-  background: white;
-  position: absolute;
-  bottom: -4px;
-}
-
-.firstname {
-  border-bottom: 4px solid var(--accent-color);
-  position: relative;
-}
-
-.firstname span {
-  background: white;
-  position: absolute;
-  right: 0;
-  bottom: -15px;
-}
-
-.lastname {
-  padding-top: 30px;
-}
-
-.sk-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  height: 120px;
+  padding: 20px;
+  font-size: 14px;
+  color: rgba(14, 21, 37, 0.8);
 }
 
-.sk-box .sk-prog {
-  font-size: 0.6em;
+.resume-container a {
+  color: rgba(14, 21, 37, 0.8);
+  text-decoration: none;
 }
 
-.sk-box .sk-icon {
-  font-size: 3em;
-  margin: 10px 0;
+.resume-container h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.sk-box .sk-name {
-  font-size: 0.8em;
+.resume-container h2 {
+  color: var(--accent-color);
+  font-size: 25.4px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.resume-name {
-  font-size: 4.9em;
-  text-align: right;
+.resume-container h3 {
+  color: var(--accent-color);
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
-.resume-role {
-  font-size: 1.68em;
+.resume-container .resume-top, .resume-container .resume-summary, .resume-container .resume-history, .resume-container .resume-bottom, .resume-container .bottom-left, .resume-container .bottom-right {
+  position: relative;
 }
 
-.resume-summary {
-  line-height: 1.1em;
-  text-align: justify;
-}
-
-.info-icon {
+.resume-container .resume-top, .resume-container .resume-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.4em;
-}
-
-.lang-box, .edu-box {
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 6px;
-  font-size: 0.9em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.lang-box p, .edu-box p {
-  width: 100%;
-}
-
-.edu-box p:first-child {
+.resume-container .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   text-transform: uppercase;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  left: -80px;
+  top: 0;
 }
 
-.vol-company span, .job-company span {
-  text-transform: uppercase;
+.resume-container .subtitle span:first-of-type {
+  color: var(--main-light-color);
 }
 
-.vol-url, .job-url {
-  font-size: 0.7em;
+.resume-container .subtitle span:last-of-type {
+  color: rgba(14, 21, 37, 0.8);
 }
 
-.vol-years, .job-years {
-  font-size: 0.8em;
+.resume-container .resume-top .subtitle {
+  top: 49px;
 }
 
-.title-cv, .resume-name, .resume-role, .resume-summary, .edu-box, .job-company.exp1, .job-url.exp1, .job-company.exp2, .job-url.exp2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 13;
-  grid-column: 1 / 14;
+.resume-container .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 250px;
 }
 
-.vol-name.vol1, .vol-years.vol1, .job-name.exp1, .job-years.exp1, .job-name.exp2, .job-years.exp2 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 12;
-  grid-column: 2 / 14;
+.resume-container .top-right .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin: 4px;
+  background: white;
 }
 
-.title-info, .title-lang, .lang-box, .title-edu, .edu-box, .vol-name.vol2, .vol-years.vol2, .job-company.exp3, .job-url.exp3 {
-  -ms-grid-column: 15;
-  -ms-grid-column-span: 13;
-  grid-column: 15 / 28;
+.resume-container .top-right .info-box:first-child {
+  margin-top: 0;
 }
 
-.job-name.exp3, .job-years.exp3, .job-name.exp4, .job-years.exp4, .job-name.exp5, .job-years.exp5 {
-  -ms-grid-column: 16;
-  -ms-grid-column-span: 12;
-  grid-column: 16 / 28;
+.resume-container .top-right .info-box:last-child {
+  margin-bottom: 0;
 }
 
-.title-exp, .title-vol, .vol-company, .vol-url, .title-skills {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 27;
-  grid-column: 1 / 28;
+.resume-container .top-right .info-icon {
+  color: var(--accent-color);
+  margin-right: 10px;
 }
 
-.info-icon {
-  -ms-grid-column: 15;
-  -ms-grid-column-span: 2;
-  grid-column: 15 / 17;
+.resume-container .resume-summary, .resume-container .resume-history, .resume-container .bottom-left, .resume-container .bottom-right {
+  margin-top: 20px;
+  border-left: 1px solid var(--accent-color);
+  padding-left: 20px;
 }
 
-.info-link {
-  -ms-grid-column: 17;
-  -ms-grid-column-span: 11;
-  grid-column: 17 / 28;
+.resume-container .resume-summary .resume-detail-icon, .resume-container .resume-history .resume-detail-icon, .resume-container .bottom-left .resume-detail-icon, .resume-container .bottom-right .resume-detail-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  left: -12px;
 }
 
-.box1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / 4;
+.resume-container .resume-summary {
+  line-height: 1.2em;
 }
 
-.box2 {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 3;
-  grid-column: 4 / 7;
+.resume-container .resume-summary .subtitle {
+  top: 25px;
 }
 
-.box3 {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 3;
-  grid-column: 7 / 10;
+.resume-container .resume-history .subtitle {
+  top: 14px;
 }
 
-.box4 {
-  -ms-grid-column: 10;
-  -ms-grid-column-span: 3;
-  grid-column: 10 / 13;
+.resume-container .resume-history .history-group {
+  padding-left: 32px;
+  position: relative;
 }
 
-.box5 {
-  -ms-grid-column: 13;
-  -ms-grid-column-span: 3;
-  grid-column: 13 / 16;
+.resume-container .resume-history .history-group::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(14, 21, 37, 0.4);
+  position: absolute;
+  top: 22px;
+  left: 2px;
 }
 
-.box6 {
-  -ms-grid-column: 16;
-  -ms-grid-column-span: 3;
-  grid-column: 16 / 19;
+.resume-container .resume-history .history-group::after {
+  content: "";
+  width: 10px;
+  height: calc(100% - 37px);
+  border-left: 1px solid rgba(14, 21, 37, 0.4);
+  border-bottom: 1px solid rgba(14, 21, 37, 0.4);
+  position: absolute;
+  top: 30px;
+  left: 5px;
 }
 
-.box7 {
-  -ms-grid-column: 19;
-  -ms-grid-column-span: 3;
-  grid-column: 19 / 22;
+.resume-container .resume-history .res-company {
+  font-size: 16px;
+  position: relative;
+  left: -32px;
 }
 
-.box8 {
-  -ms-grid-column: 22;
-  -ms-grid-column-span: 3;
-  grid-column: 22 / 25;
+.resume-container .resume-history .res-company .main-accent {
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.box9 {
-  -ms-grid-column: 25;
-  -ms-grid-column-span: 3;
-  grid-column: 25 / 28;
+.resume-container .resume-history .res-company span:last-child {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(14, 21, 37, 0.4);
 }
 
-.title-cv, .title-info {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+.resume-container .resume-history .res-url {
+  font-size: 12px;
+  margin-top: 2px;
 }
 
-.firstname {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  grid-row: 3 / 6;
+.resume-container .resume-history .res-role {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 6px;
 }
 
-.lastname {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 3;
-  grid-row: 6 / 9;
+.resume-container .resume-history .res-role span:last-child {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(14, 21, 37, 0.4);
 }
 
-.resume-role {
-  -ms-grid-row: 10;
-  -ms-grid-row-span: 2;
-  grid-row: 10 / 12;
+.resume-container .resume-history .res-years {
+  font-size: 12px;
+  margin: 2px 0 4px;
 }
 
-.resume-summary {
-  -ms-grid-row: 12;
-  -ms-grid-row-span: 6;
-  grid-row: 12 / 18;
+.resume-container .resume-history .res-desc {
+  margin-bottom: 10px;
+  position: relative;
 }
 
-.info1 {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.resume-container .resume-history .res-desc:last-child::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(14, 21, 37, 0.4);
+  position: absolute;
+  bottom: 3px;
+  left: -16px;
 }
 
-.info2 {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4 / 5;
+.resume-container .bottom-left p {
+  line-height: 16px;
 }
 
-.info3 {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  grid-row: 5 / 6;
+.resume-container .bottom-left .lang-box {
+  margin: 10px 0;
 }
 
-.info4 {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 1;
-  grid-row: 6 / 7;
+.resume-container .bottom-left .edu-box {
+  margin: 10px 0;
 }
 
-.info5 {
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 1;
-  grid-row: 7 / 8;
+.resume-container .bottom-left .edu-box:last-of-type {
+  margin-bottom: 0;
 }
 
-.info6 {
-  -ms-grid-row: 8;
-  -ms-grid-row-span: 1;
-  grid-row: 8 / 9;
+.resume-container .bottom-left .edu-box p:first-child {
+  font-weight: bold;
 }
 
-.info7 {
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 1;
-  grid-row: 9 / 10;
+.resume-container .bottom-right {
+  width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.title-lang {
-  -ms-grid-row: 11;
-  -ms-grid-row-span: 1;
-  grid-row: 11 / 12;
+.resume-container .sk-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.lang-box {
-  -ms-grid-row: 12;
-  -ms-grid-row-span: 1;
-  grid-row: 12 / 13;
+.resume-container .sk-box .sk-icon {
+  font-size: 20px;
+  width: 30px;
+  height: 22px;
+  text-align: center;
+  margin-right: 20px;
+  color: rgba(14, 21, 37, 0.4);
 }
 
-.title-edu {
-  -ms-grid-row: 14;
-  -ms-grid-row-span: 1;
-  grid-row: 14 / 15;
+.resume-container .sk-box .sk-name {
+  width: 70px;
+  margin-right: 20px;
 }
 
-.edu-box {
-  -ms-grid-row: 15;
-  -ms-grid-row-span: 2;
-  grid-row: 15 / 17;
+.resume-container .sk-box .sk-prog {
+  font-size: 10px;
 }
 
-.title-vol {
-  -ms-grid-row: 18;
-  -ms-grid-row-span: 1;
-  grid-row: 18 / 19;
+.resume-container .sk-box .sk-prog i {
+  color: var(--accent-color);
 }
 
-.vol-company {
-  -ms-grid-row: 20;
-  -ms-grid-row-span: 1;
-  grid-row: 20/ 21;
+.resume-container .sk-box .sk-prog i.far {
+  color: rgba(14, 21, 37, 0.4);
 }
 
-.vol-url {
-  -ms-grid-row: 21;
-  -ms-grid-row-span: 1;
-  grid-row: 21 / 22;
-}
-
-.vol-name {
-  -ms-grid-row: 23;
-  -ms-grid-row-span: 1;
-  grid-row: 23 / 24;
-}
-
-.vol-years {
-  -ms-grid-row: 24;
-  -ms-grid-row-span: 1;
-  grid-row: 24 / 25;
-}
-
-.title-exp {
-  -ms-grid-row: 26;
-  -ms-grid-row-span: 1;
-  grid-row: 26 / 27;
-}
-
-.job-company.exp1, .job-company.exp3 {
-  -ms-grid-row: 28;
-  -ms-grid-row-span: 1;
-  grid-row: 28 / 29;
-}
-
-.job-url.exp1, .job-url.exp3 {
-  -ms-grid-row: 29;
-  -ms-grid-row-span: 1;
-  grid-row: 29 / 30;
-}
-
-.job-name.exp1, .job-name.exp3 {
-  -ms-grid-row: 31;
-  -ms-grid-row-span: 1;
-  grid-row: 31 / 32;
-}
-
-.job-years.exp1, .job-years.exp3 {
-  -ms-grid-row: 32;
-  -ms-grid-row-span: 1;
-  grid-row: 32 / 33;
-}
-
-.job-company.exp2, .job-name.exp4 {
-  -ms-grid-row: 34;
-  -ms-grid-row-span: 1;
-  grid-row: 34 / 35;
-}
-
-.job-url.exp2, .job-years.exp4 {
-  -ms-grid-row: 35;
-  -ms-grid-row-span: 1;
-  grid-row: 35 / 36;
-}
-
-.job-name.exp2, .job-name.exp5 {
-  -ms-grid-row: 37;
-  -ms-grid-row-span: 1;
-  grid-row: 37 / 38;
-}
-
-.job-years.exp2, .job-years.exp5 {
-  -ms-grid-row: 38;
-  -ms-grid-row-span: 1;
-  grid-row: 38 / 39;
-}
-
-.title-skills {
-  -ms-grid-row: 40;
-  -ms-grid-row-span: 1;
-  grid-row: 40 / 41;
-}
-
-.sk-box {
-  -ms-grid-row: 41;
-  -ms-grid-row-span: 4;
-  grid-row: 41 / 45;
+.resume-container .sk-box .sk-prog i.fa-star-half-alt {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--accent-color)), color-stop(50%, rgba(14, 21, 37, 0.4)));
+  background: linear-gradient(90deg, var(--accent-color) 50%, rgba(14, 21, 37, 0.4) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */
