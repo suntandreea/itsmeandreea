@@ -129,6 +129,10 @@
         margin-top: 18px;
         border-left: 1px solid var(--accent-color);
         padding-left: 20px;
+
+        @media screen and (max-width: 20.99cm) {
+            margin-top: 20px;
+        }
         
         .resume-detail-icon {
             @include round(20px);
@@ -222,6 +226,10 @@
             font-weight: bold;
             font-size: 16px;
             margin-top: 6px;
+
+            @media screen and (max-width: 20.99cm) {
+                margin-top: 10px;
+            }
             span:last-child {
                 font-weight: normal;
                 font-style: italic;
@@ -233,6 +241,15 @@
         .res-years {
             font-size: 12px;
             margin: 2px 0 4px;
+            @media screen and (max-width: 20.99cm) {
+                margin-top: 4px;
+            }
+        }
+
+        .res-desc {
+            @media screen and (max-width: 20.99cm) {
+                margin-top: 6px;
+            }
         }
 
     }
@@ -242,7 +259,7 @@
         position: relative;
         margin-bottom: 10px;
 
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 20.99cm) {
             margin-bottom: 20px;
         }
 
@@ -317,6 +334,11 @@
         margin-top: 18px;
         width: 250px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+
         h3 {
             margin-bottom: 10px;
         }
@@ -326,6 +348,10 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        @media screen and (max-width: 700px) {
+            margin-bottom: 4px;
+        }
+
         .sk-icon {
             font-size: 20px;
             width: 30px;
@@ -334,6 +360,11 @@
             margin-right: 20px;
             color: var(--accent-color);
             background: white;
+
+            @media screen and (max-width: 700px) {
+                font-size: 24px;
+                height: 24px;
+            }
         }
         .sk-name {
             width: 70px;
@@ -341,6 +372,10 @@
         }
         .sk-prog {
             font-size: 10px;
+            @media screen and (max-width: 700px) {
+                font-size: 14px;
+            }
+
             i {
                 color: var(--accent-color);
                 &.far {

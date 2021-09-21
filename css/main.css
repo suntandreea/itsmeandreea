@@ -2550,6 +2550,12 @@ footer {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 20.99cm) {
+  .resume-container .resume-summary, .resume-container .resume-history, .resume-container .bottom-left {
+    margin-top: 20px;
+  }
+}
+
 .resume-container .resume-summary .resume-detail-icon, .resume-container .resume-history .resume-detail-icon, .resume-container .bottom-left .resume-detail-icon {
   width: 20px;
   height: 20px;
@@ -2661,6 +2667,12 @@ footer {
   margin-top: 6px;
 }
 
+@media screen and (max-width: 20.99cm) {
+  .resume-container .resume-history .res-role {
+    margin-top: 10px;
+  }
+}
+
 .resume-container .resume-history .res-role span:last-child {
   font-weight: normal;
   font-style: italic;
@@ -2673,13 +2685,25 @@ footer {
   margin: 2px 0 4px;
 }
 
+@media screen and (max-width: 20.99cm) {
+  .resume-container .resume-history .res-years {
+    margin-top: 4px;
+  }
+}
+
+@media screen and (max-width: 20.99cm) {
+  .resume-container .resume-history .res-desc {
+    margin-top: 6px;
+  }
+}
+
 .resume-container .grouping {
   padding-left: 32px;
   position: relative;
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 20.99cm) {
   .resume-container .grouping {
     margin-bottom: 20px;
   }
@@ -2763,6 +2787,12 @@ footer {
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 700px) {
+  .resume-container .bottom-right {
+    width: 100%;
+  }
+}
+
 .resume-container .bottom-right h3 {
   margin-bottom: 10px;
 }
@@ -2780,6 +2810,12 @@ footer {
           align-items: center;
 }
 
+@media screen and (max-width: 700px) {
+  .resume-container .sk-box {
+    margin-bottom: 4px;
+  }
+}
+
 .resume-container .sk-box .sk-icon {
   font-size: 20px;
   width: 30px;
@@ -2790,6 +2826,13 @@ footer {
   background: white;
 }
 
+@media screen and (max-width: 700px) {
+  .resume-container .sk-box .sk-icon {
+    font-size: 24px;
+    height: 24px;
+  }
+}
+
 .resume-container .sk-box .sk-name {
   width: 70px;
   margin-right: 20px;
@@ -2797,6 +2840,12 @@ footer {
 
 .resume-container .sk-box .sk-prog {
   font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .resume-container .sk-box .sk-prog {
+    font-size: 14px;
+  }
 }
 
 .resume-container .sk-box .sk-prog i {
