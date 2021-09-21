@@ -86,7 +86,7 @@
     }
     
     .skill-row {
-        background: hsla(222, 45%, 10%, 0.1);
+        background: var(--b-gray-1);
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: 1fr;
@@ -107,7 +107,7 @@
     .skill-percent {
         grid-column: 10 / 11;
         text-align: center;
-        color: hsla(222, 45%, 10%, 0.3);
+        color: var(--b-gray-3);
         min-width: 30px;
         font-size: 0.8rem;
     }

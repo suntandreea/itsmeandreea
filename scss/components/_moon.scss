@@ -19,9 +19,9 @@
 }
 
 .moon-craters {
-    background: hsla(222, 45%, 10%, 0.4);
+    background: var(--b-gray-4);
     position: absolute;
-    box-shadow: inset 1px 1px 2px hsla(222, 45%, 10%, 0.5);
+    box-shadow: inset 1px 1px 2px var(--b-gray-5);
 
     &.crater1 {
         @include round(20px);
@@ -73,11 +73,12 @@
 }
 
 .moon-shadow {
-    background: hsla(222, 45%, 10%, 0.7);
+    background: var(--b-gray-7);
     filter: blur(2px);
     position: absolute;
     z-index: 2;
     animation: moon-phases 30s linear 5s infinite normal forwards;
+    opacity: 0.8;
 }
 
 @keyframes moon-phases {
