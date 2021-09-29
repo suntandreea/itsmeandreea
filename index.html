@@ -359,7 +359,7 @@
                         <h2>Wanna know more?</h2>
                         <ul class="about-more">
                             <li><span>Print an HTML summary of my resume <a href="resume.html" target="_blank">here</a>.</span></li>
-                            <li><span>Download a PDF summary of my resume <a href="#">here</a>.</span></li>
+                            <li><span>Download a PDF summary of my resume <a href="./files/Resume-Andreea-Cozariuc.pdf" download>here</a>.</span></li>
                             <li><span>Read more about my extensive work experience on <a href="https://www.linkedin.com/in/andreeacozariuc/?locale=en_US">LinkedIn</a>.</span></li>
                         </ul>
                     </div> <!-- end of about-stats -->
@@ -400,23 +400,30 @@
 
         <div id="contact-screen" class="page-section">
 
-            <div class="contact-divider"></div>
+            <!-- <div class="contact-divider"></div> -->
 
             <h1 class="screen-title"><span>contact me</span></h1>
 
-            <form>
-                Want to reach me out? 
-
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <textarea name="comments" id="comments" placeholder="Your message here ..."></textarea>
-                <input type="submit" id="submit" value="Submit">
-
-            </form>
+            <div class="form-box">
+                <form>
+                    <p>Want to reach out? </p>
+    
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <textarea name="comments" id="comments" placeholder="Your message here ..."></textarea>
+                    
+                    <input type="submit" id="submit" value="Submit">
+    
+                </form>
+            </div>
 
             <footer>
-                <div class="social-icons icons-wrapper">
 
+                <div class="top-btn">
+                    <a href="#welcome-screen" alt="Back to the top!">»</a>
+                </div>
+
+                <div class="social-icons icons-wrapper">
                     <div class="icon-box">
                         <div class="hexa-icons"><a href="https://github.com/suntandreea" target="_blank"><i class="fab fa-github"></i></a></div>
                     </div>
@@ -429,10 +436,17 @@
                     <div class="icon-box">
                         <div class="hexa-icons"><a href="https://www.linkedin.com/in/andreeacozariuc" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
                     </div>
-
                 </div>
 
-                <p>ANDREEA COZARIUC ©2021</p>
+                <p>ANDREEA COZARIUC <span class="main-accent">
+                    ©
+                    <script type = "text/javascript">
+                        let today = new Date();
+                        document.write(today.getFullYear());
+                     </script>
+                </span>
+                </p>
+
             </footer>
 
         </div> <!-- end of contact-screen -->    

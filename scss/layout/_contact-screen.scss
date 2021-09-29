@@ -1,37 +1,146 @@
 #contact-screen {
-    background: var(--main-light-color);
-    position: relative;
-}
-
-.contact-divider {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 50vw solid var(--main-light-color);
-    box-sizing: border-box;
-    border-top: 200px solid var(--secondary-light-color);
-}
-
-form {
-    color: black;
-    margin-top: 130px;
-    background: red;
+    background: var(--b-gray-9);
+    display: flex;
+    padding: 60px 0 0;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     position: relative;
 
-    input[type=text], input[type=email], textarea {
-        background: var(--main-light-color);
-        width: 300px;
-        display: block;
-
+    .screen-title {
+        color: var(--main-light-color);
     }
-}
 
-footer {
-    background: var(--main-dark-color);
-    color: var(--main-light-color);
-    text-align: center;
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    bottom: 0;
+    .screen-title::after {
+        content: "";
+        width: 100vw;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 50px solid var(--secondary-light-color);
+    }
+
+    .form-box {
+        display: flex;
+        justify-content: center;       
+    }
+    
+    form {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        width: 500px;
+
+        p {
+            margin-bottom: 20px;
+            color: var(--secondary-light-color);
+            align-self: center;
+            font-size: 1.8rem;
+        }
+
+        input {
+            margin-bottom: 4px;
+        }
+
+        textarea {
+            line-height: 1.2rem;
+            min-height: 80px;
+        }
+
+        input[type=text], input[type=email], textarea {
+            background: var(--main-dark-color);
+            color: var(--b-gray-1);
+            outline: none;
+            border: none;
+            padding: 10px;
+
+            &::selection {
+                background: var(--secondary-dark-color);
+            }
+        }
+
+        ::placeholder {
+            color: var(--b-gray-4);
+        }
+
+        input[type=submit] {
+            width: 80px;
+            background: transparent;
+            color: var(--secondary-light-color);
+            padding: 10px;
+            border: 2px solid var(--secondary-light-color);
+            align-self: flex-end;
+            margin-top: 20px;
+
+        }
+    }
+    
+    footer {
+        background: var(--main-dark-color);
+        color: var(--main-light-color);
+        min-height: 250px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+
+        .top-btn {
+            box-sizing: border-box;
+            background: var(--accent-color);
+            position: absolute;
+            top: -25px;
+            left: calc(50% - 26px);
+            transform: rotate(-90deg);
+            font-size: 50px;
+            padding: 0 12px 2px;
+
+            a {
+                text-decoration: none;
+                color: var(--main-light-color);
+            }
+
+        }
+
+        .icons-wrapper {
+            justify-content: center;
+        }
+
+        .icon-box {
+            margin-right: 50px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        .hexa-icons {
+            width: 30px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.6rem;
+            background: var(--b-gray-9);
+
+            a:hover {
+                color: var(--accent-color);
+            }
+
+            &::before {
+                border: 25px solid transparent;
+                border-right: 15px solid var(--b-gray-9);
+                left: -40px;   
+            }
+    
+            &::after {
+                border: 25px solid transparent;
+                border-left: 15px solid var(--b-gray-9);
+                left: 30px;
+            }
+            
+        }
+     
+    
+    }
 }
