@@ -7,7 +7,7 @@
     border: 1px solid var(--b-gray-1);
     margin: 10px auto 0;
 
-    @media screen and (min-width: 21.1cm) {
+    @media screen and (min-width: 21cm) {
         box-shadow: 2px 2px 10px var(--b-gray-2);
     }
 
@@ -63,14 +63,14 @@
         font-size: 16px;
         text-transform: uppercase;
         position: relative;
-        left: -32px;
+        left: -28px;
     }
     
-    .resume-top, .resume-summary, .resume-history, .resume-bottom, .bottom-left, .bottom-right {
+    .resume-top, .resume-summary, .resume-history, .resume-sidebar, .sidebar-top, .sidebar-bottom {
         position: relative;
     }
 
-    .resume-top, .resume-bottom {
+    .resume-top {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -85,6 +85,7 @@
         transform: rotate(-90deg);
         position: absolute; 
         font-size: 12px;
+        line-height: 14px;
         left: -70px;
         top: 0;
         span:first-of-type {
@@ -97,7 +98,7 @@
 
     .resume-top {
         .subtitle {
-            top: 50px;
+            top: 15px;
         }
     }
   
@@ -125,8 +126,8 @@
         }
     }
 
-    .resume-summary, .resume-history, .bottom-left {
-        margin-top: 18px;
+    .resume-summary, .resume-history, .resume-sidebar {
+        margin-top: 20px;
         border-left: 1px solid var(--accent-color);
         padding-left: 20px;
 
@@ -152,21 +153,30 @@
         line-height: 15px;
         text-align: justify;
         .subtitle {
-            top: 15px;
-            left: -74px;
+            top: 0px;
+            left: -60px;
+        }
+    }
+
+    .inner-container {
+        display: flex;
+        flex-flow: row nowrap;
+
+        @media screen and (max-width: 20.99cm) {
+            flex-flow: column nowrap;
         }
     }
 
     .resume-history {
         .subtitle {
-            top: 10px;
-            left: -68px;
+            top: 45px;
+            left: -100px;
         }
 
         .res-company {
             font-size: 16px;
             position: relative;
-            left: -32px;
+            left: -30px;
 
             .main-accent{
                 font-weight: bold;
@@ -205,7 +215,7 @@
                 border: 1px solid var(--accent-color);
                 border-radius: 5px;
                 padding: 2px 4px;
-                margin-right: 6px;
+                margin-right: 2px;
 
                 @media screen and (max-width: 560px) {
                     margin-bottom: 6px;
@@ -216,6 +226,7 @@
                 color: var(--b-gray-4);
                 padding: 2px 0;
                 font-size: 13px;
+                margin-right: 2px;
             }
             span:last-child {
                 margin-right: 0;
@@ -225,7 +236,7 @@
         .res-role {
             font-weight: bold;
             font-size: 16px;
-            margin-top: 6px;
+            margin-top: 7px;
 
             @media screen and (max-width: 20.99cm) {
                 margin-top: 10px;
@@ -255,13 +266,14 @@
     }
 
     .grouping {
-        padding-left: 32px;
+        padding-left: 24px;
         position: relative;
         margin-bottom: 10px;
 
         @media screen and (max-width: 20.99cm) {
             margin-bottom: 20px;
         }
+
 
         &:last-of-type {
             margin-bottom: 0;
@@ -277,7 +289,7 @@
         }
         &::after {
             content: "";
-            width: 10px;
+            width: 4px;
             height: calc(100% - 37px);
             border-left: 1px solid var(--b-gray-4);
             border-bottom: 1px solid var(--b-gray-4);
@@ -285,6 +297,10 @@
             top: 30px;
             left: 5px;
         }
+    }
+
+    .resume-history .grouping:nth-child(3) {
+        margin-top: 3px;
     }
 
     .res-desc, .grouping > div {
@@ -296,47 +312,68 @@
                 border: 1px solid var(--b-gray-4);
                 position: absolute; 
                 bottom: 3px;
-                left: -16px;
+                left: -14px;
             }
         }    
     }
 
-    .resume-bottom {
+    .resume-sidebar {
+        display: flex;
+        flex-flow: column wrap;
+        width: 30%;
+
+        @media screen and (max-width: 20.99cm) {
+            flex-flow: row wrap;
+            width: 99%;
+        }
+
         .subtitle {
             top: 38px;
             left: -75px;
         }
+
+        .grouping {
+            margin: 3px 0 14px;
+        }
     }
 
-    .bottom-left {
+    .sidebar-top {
         p {
             line-height: 16px;
+            margin-bottom: 2px;
         }
         .lang-box {
             margin: 10px 0;
         }
-        .edu-box {
-            margin-top: 10px;
-            &:last-of-type {
-                margin-top: 8px;
+        & .grouping:nth-child(2) {
+            @media screen and (max-width: 20.99cm) and (min-width: 700px) {
+                display: none;
             }
+        }
+        .edu-box {
+            margin-top: 7px;
             p {
                 font-size: 13px;
             }
             p:first-child {
                 font-weight: bold;
                 font-size: 14px;
+                margin-bottom: 10px;
+
             }
         }
     }
 
-    .bottom-right {
-        margin-top: 18px;
-        width: 250px;
+    .sidebar-bottom {
+        margin-top: 8px;
         box-sizing: border-box;
 
         @media screen and (max-width: 700px) {
             width: 100%;
+        }
+
+        @media screen and (max-width: 20.99cm) {
+            margin-top: 20px;
         }
 
         h3 {
@@ -344,10 +381,20 @@
         }
     }
 
+    .sidebar-top, .sidebar-bottom {
+        @media screen and (max-width: 20.99cm) {
+            width: 49%;
+        }
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+    }
+
     .sk-box {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        margin-bottom: 8px;
         @media screen and (max-width: 700px) {
             margin-bottom: 4px;
         }
@@ -357,22 +404,26 @@
             width: 30px;
             height: 21px;
             text-align: center;
-            margin-right: 20px;
+            margin-right: 10px;
             color: var(--accent-color);
             background: white;
 
-            @media screen and (max-width: 700px) {
+            @media screen and (min-width: 21cm) {
+                display: none;
+            }
+
+            @media screen and (max-width: 20.99cm) {
                 font-size: 24px;
                 height: 24px;
             }
         }
         .sk-name {
-            width: 70px;
-            margin-right: 20px;
+            width: 65px;
+            margin-right: 8px;
         }
         .sk-prog {
-            font-size: 10px;
-            @media screen and (max-width: 700px) {
+            font-size: 9px;
+            @media screen and (max-width: 20.99cm) {
                 font-size: 14px;
             }
 
@@ -387,6 +438,25 @@
                     -webkit-text-fill-color: transparent;
                 }
             }
+        }
+    }
+
+    .qr-box {
+        color: var(--b-gray-2);
+        text-align: center;
+        padding-top: 10px;
+
+        @media screen and (max-width: 20.99cm) {
+            display: none;
+        }
+
+        p:last-of-type {
+            margin-top: 6px;
+        }
+
+        path {
+            fill: var(--accent-color);
+            shape-rendering: crispEdges;
         }
     }
 }
@@ -413,15 +483,25 @@
     .resume-container {
         width: calc(21cm - 70px);
         height: 29.7cm;
+        overflow: none;
     
-        .resume-summary, .resume-history, .bottom-left {
+        .sidebar-top {
+            & .grouping:nth-child(2) {
+                // display: none;
+            }
+        }
+
+        .resume-summary, .resume-history, .resume-sidebar {
             .resume-detail-icon {
-                color: var(--accent-color);
+                // color: var(--accent-color);
                 font-size: 10px;
             }
         }
 
         .sk-box {
+            .sk-icon {
+                display: none;
+            }
             .sk-prog {
                 i {
                     &.far {
