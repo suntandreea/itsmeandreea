@@ -11,19 +11,31 @@
     min-height: 1000px;
     margin: 0 auto;
 
-    h2 {
-        font-size: 1.8rem;
-        color: var(--secondary-light-color);
-        text-align: center;
-        margin: 20px 0;
-    }
-
     p {
         line-height: 1.3rem;
         margin-bottom: 8px;
         &:last-of-type {
             margin-bottom: none;
         }
+    }
+}
+
+.about-icons {
+    justify-content: space-between;
+    row-gap: 20px;
+
+    p {
+        text-align: center;
+    }
+    
+    .icon-box {
+        width: calc(25% - 10px);
+        @media only screen and (max-width: 1000px) {
+            width: calc(50% - 10px);
+        } 
+        @media only screen and (max-width: 500px) {
+            width: 100%;
+        } 
     }
 }
 
@@ -34,7 +46,6 @@
 
     .about-summary {
         width: 580px;
-        // background: yellow;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -47,8 +58,7 @@
     }
     
     .about-img {
-        width: 180px;
-        // margin-bottom: 20px;
+        width: 300px;
     }
     
     .about-stats {
@@ -57,7 +67,6 @@
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-between;
-        // background: yellow;
 
         @media only screen and (max-width: 1240px) {
             width: 100%;

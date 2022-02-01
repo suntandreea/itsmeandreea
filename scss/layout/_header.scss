@@ -6,7 +6,9 @@
     text-transform: uppercase;
     background: var(--main-dark-color);
     box-shadow: 0 0 8px -2px hsla(222, 45%, 92%, 0.4);
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
     z-index: 2;
 
     nav {

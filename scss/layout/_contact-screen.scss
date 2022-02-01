@@ -8,6 +8,7 @@
 
     .screen-title {
         color: var(--main-light-color);
+        padding: 60px;
     }
 
     .screen-title::after {
@@ -66,10 +67,9 @@
         }
 
         input[type=submit] {
-            width: 80px;
             background: transparent;
             color: var(--secondary-light-color);
-            padding: 10px;
+            padding: 10px 40px;
             border: 2px solid var(--secondary-light-color);
             align-self: flex-end;
             margin-top: 20px;

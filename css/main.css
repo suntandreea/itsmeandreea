@@ -1849,6 +1849,7 @@ table {
   width: 40px;
   height: 60px;
   background: var(--secondary-light-color);
+  color: var(--main-light-color);
   position: relative;
   font-size: 2rem;
   line-height: 60px;
@@ -1909,6 +1910,51 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
+h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-light-color);
+  text-align: center;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 1.7rem;
+  color: var(--main-dark-color);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-light-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button {
+  background: transparent;
+  border: 3px solid var(--secondary-light-color);
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+button a {
+  color: var(--main-dark-color);
+}
+
+button a:hover, button a:active {
+  text-decoration: none;
+}
+
+button:hover {
+  background: var(--secondary-light-color);
+}
+
+button:hover a {
+  color: var(--main-light-color);
+}
+
 #main-navigation {
   height: 50px;
   width: 100%;
@@ -1918,7 +1964,10 @@ a:hover, a:active {
   background: var(--main-dark-color);
   -webkit-box-shadow: 0 0 8px -2px rgba(225, 231, 244, 0.4);
           box-shadow: 0 0 8px -2px rgba(225, 231, 244, 0.4);
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 
@@ -2081,13 +2130,6 @@ a:hover, a:active {
   margin: 0 auto;
 }
 
-.about-container h2 {
-  font-size: 1.8rem;
-  color: var(--secondary-light-color);
-  text-align: center;
-  margin: 20px 0;
-}
-
 .about-container p {
   line-height: 1.3rem;
   margin-bottom: 8px;
@@ -2095,6 +2137,33 @@ a:hover, a:active {
 
 .about-container p:last-of-type {
   margin-bottom: none;
+}
+
+.about-icons {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 20px;
+}
+
+.about-icons p {
+  text-align: center;
+}
+
+.about-icons .icon-box {
+  width: calc(25% - 10px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-icons .icon-box {
+    width: calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-icons .icon-box {
+    width: 100%;
+  }
 }
 
 .about-inner {
@@ -2135,7 +2204,7 @@ a:hover, a:active {
 }
 
 .about-inner .about-img {
-  width: 180px;
+  width: 300px;
 }
 
 .about-inner .about-stats {
@@ -2298,7 +2367,7 @@ a:hover, a:active {
 
 .portfolio-container {
   max-width: 1200px;
-  height: calc(100vh - 40px - 100px);
+  min-height: calc(100vh - 40px - 100px);
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2311,22 +2380,64 @@ a:hover, a:active {
 .portfolio-box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (400px)[3];
-      grid-template-columns: repeat(3, 400px);
-  -ms-grid-rows: (300px)[3];
-      grid-template-rows: repeat(3, 300px);
-  gap: 3px 3px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .portfolio-box {
+    gap: 10px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+  }
 }
 
 .projects {
   background: transparent;
   overflow: hidden;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .projects img {
   width: 100%;
-  position: relative;
-  top: -1px;
+}
+
+.projects p {
+  text-align: justify;
+}
+
+.projects .project-info {
+  display: none;
+}
+
+.projects:hover .project-info {
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  background: var(--main-light-color);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #blog-screen {
@@ -2351,6 +2462,7 @@ a:hover, a:active {
 
 #contact-screen .screen-title {
   color: var(--main-light-color);
+  padding: 60px;
 }
 
 #contact-screen .screen-title::after {
@@ -2440,10 +2552,9 @@ a:hover, a:active {
 }
 
 #contact-screen form input[type=submit] {
-  width: 80px;
   background: transparent;
   color: var(--secondary-light-color);
-  padding: 10px;
+  padding: 10px 40px;
   border: 2px solid var(--secondary-light-color);
   -ms-flex-item-align: end;
       align-self: flex-end;
