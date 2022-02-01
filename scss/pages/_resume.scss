@@ -110,7 +110,7 @@
         .info-box {
             display: flex;
             flex-flow: row nowrap;
-            margin: 4px;
+            margin: 3px;
             background: white;
             &:first-child {
                 margin-top: 0;
@@ -127,7 +127,7 @@
     }
 
     .resume-summary, .resume-history, .resume-sidebar {
-        margin-top: 20px;
+        margin-top: 14px;
         border-left: 1px solid var(--accent-color);
         padding-left: 20px;
 
@@ -339,7 +339,7 @@
 
     .sidebar-top {
         p {
-            line-height: 16px;
+            line-height: 15px;
             margin-bottom: 2px;
         }
         .lang-box {
@@ -484,16 +484,11 @@
         width: calc(21cm - 70px);
         height: 29.7cm;
         overflow: none;
-    
-        .sidebar-top {
-            & .grouping:nth-child(2) {
-                // display: none;
-            }
-        }
 
         .resume-summary, .resume-history, .resume-sidebar {
             .resume-detail-icon {
-                // color: var(--accent-color);
+                color: var(--accent-color);
+                background: white;
                 font-size: 10px;
             }
         }

@@ -2499,6 +2499,7 @@ button:hover a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 500px;
+  padding: 10px;
 }
 
 #contact-screen form p {
@@ -2794,7 +2795,7 @@ button:hover a {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  margin: 4px;
+  margin: 3px;
   background: white;
 }
 
@@ -2812,7 +2813,7 @@ button:hover a {
 }
 
 .resume-container .resume-summary, .resume-container .resume-history, .resume-container .resume-sidebar {
-  margin-top: 20px;
+  margin-top: 14px;
   border-left: 1px solid var(--accent-color);
   padding-left: 20px;
 }
@@ -3072,7 +3073,7 @@ button:hover a {
 }
 
 .resume-container .sidebar-top p {
-  line-height: 16px;
+  line-height: 15px;
   margin-bottom: 2px;
 }
 
@@ -3251,6 +3252,8 @@ button:hover a {
     overflow: none;
   }
   .resume-container .resume-summary .resume-detail-icon, .resume-container .resume-history .resume-detail-icon, .resume-container .resume-sidebar .resume-detail-icon {
+    color: var(--accent-color);
+    background: white;
     font-size: 10px;
   }
   .resume-container .sk-box .sk-icon {
