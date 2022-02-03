@@ -1,61 +1,63 @@
 *::selection {
-    background: var(--accent-color);
-    color: var(--main-light-color);
+  background: var(--accent-color);
+  color: var(--main-light-color);
 }
 
 #main-wrapper {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .main-accent {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 a {
-    color: var(--secondary-dark-color);
-    text-decoration: none;
-    &:hover, &:active {
-        text-decoration: underline;
-    }
+  color: var(--secondary-dark-color);
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: var(--secondary-light-color);
-    text-align: center;
-    margin: 20px 0;
+  font-size: 1.8rem;
+  color: var(--secondary-light-color);
+  text-align: center;
+  margin: 20px 0;
 }
 
 h3 {
-    font-size: 1.7rem;
-    color: var(--main-dark-color);
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 1.7rem;
+  color: var(--main-dark-color);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 h4 {
-    font-size: 1.2rem;
-    color: var(--secondary-light-color);
-    text-align: center;
-    text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--secondary-light-color);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 button {
-    background: transparent;
-    border: 3px solid var(--secondary-light-color);
-    padding: 10px 20px;
-    text-transform: uppercase;
+  background: transparent;
+  border: 3px solid var(--secondary-light-color);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  a {
+    color: var(--main-dark-color);
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    background: var(--secondary-light-color);
     a {
-        color: var(--main-dark-color);
-        &:hover, &:active {
-            text-decoration: none;
-        }
+      color: var(--main-light-color);
     }
-    &:hover {
-        background: var(--secondary-light-color);
-        a {
-            color: var(--main-light-color);
-        }
-    }
+  }
 }

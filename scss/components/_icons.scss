@@ -1,51 +1,48 @@
 .icons-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  // background: pink;
+
+  .icon-box {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 20px 0;
-    // background: pink;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 
-    .icon-box {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+  .hexa-icons {
+    width: 40px;
+    height: 60px;
+    background: var(--secondary-light-color);
+    color: var(--main-light-color);
+    position: relative;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center;
+
+    a {
+      color: var(--main-light-color);
     }
 
-    .hexa-icons {
-        width: 40px;
-        height: 60px;
-        background: var(--secondary-light-color);
-        color: var(--main-light-color);
-        position: relative;
-        font-size: 2rem;
-        line-height: 60px;
-        text-align: center;
-
-        a {
-            color: var(--main-light-color);
-        }
-        
-
-        &::before {
-            content: "";
-            @include square(0px);
-            border: 30px solid transparent;
-            border-right: 20px solid var(--secondary-light-color);
-            position: absolute;
-            left: -50px;
-            top: 0;
-
-        }
-
-        &::after {
-            content: "";
-            @include square(0px);
-            border: 30px solid transparent;
-            border-left: 20px solid var(--secondary-light-color);
-            position: absolute;
-            left: 40px;
-            top: 0;
-
-        }
+    &::before {
+      content: "";
+      @include square(0px);
+      border: 30px solid transparent;
+      border-right: 20px solid var(--secondary-light-color);
+      position: absolute;
+      left: -50px;
+      top: 0;
     }
+
+    &::after {
+      content: "";
+      @include square(0px);
+      border: 30px solid transparent;
+      border-left: 20px solid var(--secondary-light-color);
+      position: absolute;
+      left: 40px;
+      top: 0;
+    }
+  }
 }

@@ -1,115 +1,115 @@
 .moon {
-    position: relative;
+  position: relative;
 }
 
 .moon-shape {
-    background: hsl(222, 45%, 87%);
-    @include round(200px);
-    position: relative;
-    box-shadow: none;
-    z-index: 2;
-    animation: moon-glow 2s ease-in-out infinite;
-    overflow: hidden;
+  background: hsl(222, 45%, 87%);
+  @include round(200px);
+  position: relative;
+  box-shadow: none;
+  z-index: 2;
+  animation: moon-glow 2s ease-in-out infinite;
+  overflow: hidden;
 }
 
 @keyframes moon-glow {
-    50% {
-        box-shadow: 0 0 20px hsl(222, 45%, 92%);
-    }
+  50% {
+    box-shadow: 0 0 20px hsl(222, 45%, 92%);
+  }
 }
 
 .moon-craters {
-    background: var(--b-gray-4);
-    position: absolute;
-    box-shadow: inset 1px 1px 2px var(--b-gray-5);
+  background: var(--b-gray-4);
+  position: absolute;
+  box-shadow: inset 1px 1px 2px var(--b-gray-5);
 
-    &.crater1 {
-        @include round(20px);
-        top: 80px;
-        left: 14px;
-        transform: rotate(25deg) skew(10deg);
-        box-shadow: none;
-        opacity: 0.4;
-    }
-    &.crater2 {
-        @include round(30px);
-        top: 30px;
-        left: 50px;
-        opacity: 0.6;
-    }
-    &.crater3 {
-        @include round(25px);
-        top: 45px;
-        right: 40px;
-        transform: rotate(65deg) skew(20deg);
-        box-shadow: none;
-        opacity: 0.2;
-    }
-    &.crater4 {
-        @include round(32px);
-        bottom: 60px;
-        right: 20px;
-        opacity: 0.5;
-    }
-    &.crater5 {
-        @include round(40px);
-        bottom: 20px;
-        right: 50px;
-        transform: skew(20deg);
-        opacity: 0.8;
-    }
-    &.crater6 {
-        @include round(22px);
-        bottom: 40px;
-        left: 60px;
-        opacity: 0.6;
-    }
-    &.crater7 {
-        @include round(36px);
-        bottom: 82px;
-        left: 90px;
-        transform: rotate(25deg) skew(14deg);
-    }
+  &.crater1 {
+    @include round(20px);
+    top: 80px;
+    left: 14px;
+    transform: rotate(25deg) skew(10deg);
+    box-shadow: none;
+    opacity: 0.4;
+  }
+  &.crater2 {
+    @include round(30px);
+    top: 30px;
+    left: 50px;
+    opacity: 0.6;
+  }
+  &.crater3 {
+    @include round(25px);
+    top: 45px;
+    right: 40px;
+    transform: rotate(65deg) skew(20deg);
+    box-shadow: none;
+    opacity: 0.2;
+  }
+  &.crater4 {
+    @include round(32px);
+    bottom: 60px;
+    right: 20px;
+    opacity: 0.5;
+  }
+  &.crater5 {
+    @include round(40px);
+    bottom: 20px;
+    right: 50px;
+    transform: skew(20deg);
+    opacity: 0.8;
+  }
+  &.crater6 {
+    @include round(22px);
+    bottom: 40px;
+    left: 60px;
+    opacity: 0.6;
+  }
+  &.crater7 {
+    @include round(36px);
+    bottom: 82px;
+    left: 90px;
+    transform: rotate(25deg) skew(14deg);
+  }
 }
 
 .moon-shadow {
-    background: var(--b-gray-7);
-    filter: blur(2px);
-    position: absolute;
-    z-index: 2;
-    animation: moon-phases 30s linear 5s infinite normal forwards;
-    opacity: 0.8;
+  background: var(--b-gray-7);
+  filter: blur(2px);
+  position: absolute;
+  z-index: 2;
+  animation: moon-phases 30s linear 5s infinite normal forwards;
+  opacity: 0.8;
 }
 
 @keyframes moon-phases {
-    0% {
-        visibility: visible;
-        @include round(260px);
-        top: -30px;
-        left: -260px;
-    }
-	25% {
-		@include round(200px);
-		top: 0px;
-		left: 0px;
-	}
-	35% {
-		@include round(200px);
-		top: 0px;
-		left: 0px;
-	}
-    60% {
-		@include round(260px);
-		top: -30px;
-        left: 260px;
-	}
-    61% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: hidden;
-        @include round(260px);
-        top: -30px;
-        left: -260px;
-    }
+  0% {
+    visibility: visible;
+    @include round(260px);
+    top: -30px;
+    left: -260px;
+  }
+  25% {
+    @include round(200px);
+    top: 0px;
+    left: 0px;
+  }
+  35% {
+    @include round(200px);
+    top: 0px;
+    left: 0px;
+  }
+  60% {
+    @include round(260px);
+    top: -30px;
+    left: 260px;
+  }
+  61% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    @include round(260px);
+    top: -30px;
+    left: -260px;
+  }
 }
