@@ -2,9 +2,8 @@
   background: var(--b-gray-4);
   width: 21cm;
   height: 29.7cm;
-  padding-left: 70px;
+  padding-left: 1.5cm;
   box-sizing: border-box;
-  border: 1px solid var(--b-gray-1);
   margin: 10px auto 0;
 
   @media screen and (min-width: 21cm) {
@@ -22,12 +21,12 @@
 
 .resume-container {
   background: white;
-  width: calc(21cm - 72px);
-  height: calc(29.7cm - 2px);
+  width: calc(21cm - 1.5cm);
+  height: calc(29.7cm);
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  padding: 20px;
+  padding: 0.6cm 0.5cm;
   font-size: 14px;
   color: var(--b-gray-8);
 
@@ -39,6 +38,10 @@
   a {
     color: var(--b-gray-8);
     text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent-color);
   }
 
   h1 {
@@ -62,8 +65,7 @@
     color: var(--accent-color);
     font-size: 16px;
     text-transform: uppercase;
-    position: relative;
-    left: -28px;
+    text-align: left;
   }
 
   .resume-top,
@@ -107,6 +109,12 @@
     }
   }
 
+  .top-left {
+    h2 {
+      text-align: left;
+    }
+  }
+
   .top-right {
     display: flex;
     flex-flow: column nowrap;
@@ -136,7 +144,7 @@
   .resume-sidebar {
     margin-top: 14px;
     border-left: 1px solid var(--accent-color);
-    padding-left: 20px;
+    padding-left: 10px;
 
     @media screen and (max-width: 20.99cm) {
       margin-top: 20px;
@@ -155,16 +163,6 @@
     }
   }
 
-  .resume-summary {
-    font-size: 14px;
-    line-height: 15px;
-    text-align: justify;
-    .subtitle {
-      top: 0px;
-      left: -60px;
-    }
-  }
-
   .inner-container {
     display: flex;
     flex-flow: row nowrap;
@@ -175,6 +173,8 @@
   }
 
   .resume-history {
+    width: calc(100% - 4.2cm - 0.2cm);
+
     .subtitle {
       top: 45px;
       left: -100px;
@@ -183,7 +183,7 @@
     .res-company {
       font-size: 16px;
       position: relative;
-      left: -30px;
+      left: -16px;
 
       .main-accent {
         font-weight: bold;
@@ -203,7 +203,7 @@
 
     .res-url {
       font-size: 12px;
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     .res-tags {
@@ -258,13 +258,12 @@
 
     .res-years {
       font-size: 12px;
-      margin: 2px 0 4px;
-      @media screen and (max-width: 20.99cm) {
-        margin-top: 4px;
-      }
+      margin: 4px 0 4px;
     }
 
     .res-desc {
+      font-size: 13px;
+      line-height: 15px;
       @media screen and (max-width: 20.99cm) {
         margin-top: 6px;
       }
@@ -304,10 +303,6 @@
     }
   }
 
-  .resume-history .grouping:nth-child(3) {
-    margin-top: 3px;
-  }
-
   .res-desc,
   .grouping > div {
     position: relative;
@@ -326,7 +321,8 @@
   .resume-sidebar {
     display: flex;
     flex-flow: column wrap;
-    width: 30%;
+    width: 4.5cm;
+    margin-left: 0.2cm;
 
     @media screen and (max-width: 20.99cm) {
       flex-flow: row wrap;
@@ -389,9 +385,6 @@
   .sidebar-top,
   .sidebar-bottom {
     @media screen and (max-width: 20.99cm) {
-      width: 49%;
-    }
-    @media screen and (max-width: 700px) {
       width: 100%;
     }
   }
@@ -406,9 +399,9 @@
     }
 
     .sk-icon {
-      font-size: 20px;
+      font-size: 24px;
       width: 30px;
-      height: 21px;
+      height: 24px;
       text-align: center;
       margin-right: 10px;
       color: var(--accent-color);
@@ -417,10 +410,8 @@
       @media screen and (min-width: 21cm) {
         display: none;
       }
-
-      @media screen and (max-width: 20.99cm) {
+      ion-icon {
         font-size: 24px;
-        height: 24px;
       }
     }
     .sk-name {
@@ -490,8 +481,6 @@
     margin: 0;
   }
   .resume-container {
-    width: calc(21cm - 70px);
-    height: 29.7cm;
     overflow: none;
 
     .resume-summary,
