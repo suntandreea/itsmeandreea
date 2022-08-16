@@ -2610,6 +2610,11 @@ button:hover a {
 .resume-container .resume-history {
   width: calc(100% - 4.2cm - 0.2cm);
 }
+@media screen and (max-width: 20.99cm) {
+  .resume-container .resume-history {
+    width: 99%;
+  }
+}
 .resume-container .resume-history .subtitle {
   top: 45px;
   left: -100px;
