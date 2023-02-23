@@ -252,6 +252,12 @@
       @media screen and (max-width: 20.99cm) {
         margin-top: 10px;
       }
+
+      span:nth-child(2) {
+        font-size: 12px;
+        margin: 4px 0 4px;
+      }
+
       span:last-child {
         font-weight: normal;
         font-style: italic;
@@ -260,16 +266,16 @@
       }
     }
 
-    .res-years {
-      font-size: 12px;
-      margin: 4px 0 4px;
-    }
-
     .res-desc {
       font-size: 13px;
       line-height: 15px;
+      margin-top: 3px;
       @media screen and (max-width: 20.99cm) {
         margin-top: 6px;
+      }
+      span:not(:first-child) {
+        display: block;
+        margin-top: 2px;
       }
     }
   }
@@ -350,27 +356,41 @@
     }
     .lang-box {
       margin: 10px 0;
+      p:not(:first-child) {
+        margin-top: 6px;
+      }
     }
-    & .grouping:nth-child(2) {
+    .grouping:nth-child(2) {
+      margin-top: 30px;
       @media screen and (max-width: 20.99cm) and (min-width: 700px) {
         display: none;
       }
     }
     .edu-box {
-      margin-top: 7px;
+      margin-top: 10px;
+
+      &:nth-of-type(2) {
+        margin-top: 30px;
+      }
       p {
         font-size: 13px;
-      }
-      p:first-child {
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 10px;
+
+        &:first-child {
+          font-weight: bold;
+          font-size: 14px;
+          margin-bottom: 6px;
+        }
+
+        &.degree {
+          font-weight: 600;
+          margin: 4px 0;
+        }
       }
     }
   }
 
   .sidebar-bottom {
-    margin-top: 8px;
+    margin-top: 30px;
     box-sizing: border-box;
 
     @media screen and (max-width: 700px) {
@@ -447,6 +467,7 @@
   }
 
   .qr-box {
+    margin-top: 30px;
     color: var(--b-gray-2);
     text-align: center;
     padding-top: 10px;
