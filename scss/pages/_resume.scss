@@ -66,10 +66,10 @@
     font-size: 16px;
     text-transform: uppercase;
     text-align: left;
+    margin-bottom: 14px;
   }
 
   .resume-top,
-  .resume-summary,
   .resume-history,
   .resume-sidebar,
   .sidebar-top,
@@ -139,7 +139,6 @@
     }
   }
 
-  .resume-summary,
   .resume-history,
   .resume-sidebar {
     margin-top: 14px;
@@ -360,8 +359,17 @@
         margin-top: 6px;
       }
     }
-    .grouping:nth-child(2) {
-      margin-top: 30px;
+    .grouping:nth-child(1) {
+      .about {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 20.99cm) and (min-width: 700px) {
+        display: none;
+      }
+    }
+
+    .grouping:nth-child(3) {
+      margin-top: 20px;
       @media screen and (max-width: 20.99cm) and (min-width: 700px) {
         display: none;
       }
@@ -370,7 +378,7 @@
       margin-top: 10px;
 
       &:nth-of-type(2) {
-        margin-top: 30px;
+        margin-top: 10px;
       }
       p {
         font-size: 13px;
@@ -390,7 +398,7 @@
   }
 
   .sidebar-bottom {
-    margin-top: 30px;
+    margin-top: 20px;
     box-sizing: border-box;
 
     @media screen and (max-width: 700px) {
@@ -467,7 +475,7 @@
   }
 
   .qr-box {
-    margin-top: 30px;
+    margin-top: 20px;
     color: var(--b-gray-2);
     text-align: center;
     padding-top: 10px;
@@ -483,6 +491,10 @@
     path {
       fill: var(--accent-color);
       shape-rendering: crispEdges;
+    }
+
+    .qr-code {
+      margin-top: 10px;
     }
   }
 }
@@ -508,7 +520,6 @@
   .resume-container {
     overflow: none;
 
-    .resume-summary,
     .resume-history,
     .resume-sidebar {
       .resume-detail-icon {
